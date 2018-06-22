@@ -1,0 +1,2 @@
+class Scriptwriter < ApplicationRecord
+end
