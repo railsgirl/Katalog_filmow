@@ -5,7 +5,7 @@ class CreateOpinions < ActiveRecord::Migration[5.2]
       t.string :autor_surname
       t.integer :rate
       t.text :comment
-      t.reference :movie
+      t.references :movie
 
       t.timestamps
     end
