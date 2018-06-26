@@ -1,0 +1,34 @@
+<%= form_for(@movie) do |f| %>
+
+  
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {prompt: 'Choose a genre' }) %><br>
+    <%= f.collection_select(:country_id, Country.all, :id, :name, {prompt: 'Choose a country' }) %><br>
+
+    
+    <%= f.label :name %><br>
+    <%= f.text_field :name, placeholder: 'Type the movie title here' %><br>
+
+
+
+    <%= f.label :length %><br>
+    <%= f.text_field :length, placeholder: 'Type the movie length here' %><br>
+    <%= f.label :premiere_date %><br>
+    <%= f.text_field :premiere_date, placeholder: 'Type premiere date here' %><br>
+    
+    
+
+    <%= f.label :director %><br>
+    <%= f.text_field :director, placeholder: 'Type the movie director here' %><br>
+
+    <%= f.label :scriptwriter %><br>
+    <%= f.text_field :scriptwriter, placeholder: 'Type the movie scriptwriter here' %><br>
+
+    
+    <%= f.label :description %><br>
+    <%= f.text_area :description, size: "60x12", placeholder: 'Type the movie description here' %><br>
+
+    <%= f.submit %>
+<% end %>
+
+    
+    

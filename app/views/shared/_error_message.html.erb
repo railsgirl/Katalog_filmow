@@ -1,0 +1,10 @@
+<% if @movie.errors.any? %>
+     <div>
+          <p><%= pluralize(@movie.errors.count, "error") %> prevented this movie from saving.</p>
+          <ul>
+               <% @movie.errors.full_messages.each do |msg| %>
+               <li><%= msg %></li>
+               <% end %>
+          </ul> 
+     </div>
+<% end %>
